@@ -33,5 +33,14 @@ def health_check():
     }
 
 
+@app.get("/")
+def root():
+    return {
+        "message": "API SIGEA funcionando",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 app.include_router(animals_router, prefix="/api/animals", tags=["Animals"])
 app.include_router(ai_router, prefix="/api/ai", tags=["Artificial Intelligence"])
