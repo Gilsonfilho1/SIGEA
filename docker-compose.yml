@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: agrogen_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: agrogen
+      POSTGRES_PASSWORD: agrogen123
+      POSTGRES_DB: agrogen_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - agrogen_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  agrogen_postgres_data:
