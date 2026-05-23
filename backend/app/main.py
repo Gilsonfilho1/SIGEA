@@ -12,7 +12,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
-    description="API do projeto AgroGen IA para o Hackathon Expoagro Crateús.",
+    description="API do projeto SIGEA para o Hackathon Expoagro Crateus.",
 )
 
 app.add_middleware(

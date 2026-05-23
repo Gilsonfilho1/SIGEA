@@ -1,4 +1,4 @@
-# SIGEA - AgroGen IA
+# SIGEA
 
 Boilerplate full stack para um sistema de apoio agropecuário com cadastro de animais e análise simples de padrões de fertilidade usando uma API em Python.
 
@@ -67,9 +67,9 @@ O banco será iniciado com as credenciais definidas no `docker-compose.yml`:
 ```text
 host: localhost
 porta: 5432
-banco: agrogen_db
-usuario: agrogen
-senha: agrogen123
+banco: sigea_db
+usuario: sigea
+senha: sigea123
 ```
 
 Para parar o banco:
@@ -195,10 +195,10 @@ http://localhost:5173
 O backend lê as configurações do arquivo `backend/.env`.
 
 ```env
-APP_NAME=AgroGen IA API
+APP_NAME=SIGEA API
 APP_VERSION=0.1.0
 ENVIRONMENT=development
-DATABASE_URL=postgresql+psycopg2://agrogen:agrogen123@localhost:5432/agrogen_db
+DATABASE_URL=postgresql+psycopg2://sigea:sigea123@localhost:5432/sigea_db
 BACKEND_CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 ```
 

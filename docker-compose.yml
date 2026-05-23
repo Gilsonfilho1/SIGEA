@@ -1,16 +1,16 @@
 services:
   postgres:
     image: postgres:16
-    container_name: agrogen_postgres
+    container_name: sigea_postgres
     restart: always
     environment:
-      POSTGRES_USER: agrogen
-      POSTGRES_PASSWORD: agrogen123
-      POSTGRES_DB: agrogen_db
+      POSTGRES_USER: sigea
+      POSTGRES_PASSWORD: sigea123
+      POSTGRES_DB: sigea_db
     ports:
       - "5432:5432"
     volumes:
-      - agrogen_postgres_data:/var/lib/postgresql/data
+      - sigea_postgres_data:/var/lib/postgresql/data
 
 volumes:
-  agrogen_postgres_data:
+  sigea_postgres_data:

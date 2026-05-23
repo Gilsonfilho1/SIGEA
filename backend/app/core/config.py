@@ -2,11 +2,11 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    APP_NAME: str = "AgroGen IA API"
+    APP_NAME: str = "SIGEA API"
     APP_VERSION: str = "0.1.0"
     ENVIRONMENT: str = "development"
 
-    DATABASE_URL: str = "postgresql+psycopg2://agrogen:agrogen123@localhost:5432/agrogen_db"
+    DATABASE_URL: str = "postgresql+psycopg2://sigea:sigea123@localhost:5432/sigea_db"
     BACKEND_CORS_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173"
 
     @property
