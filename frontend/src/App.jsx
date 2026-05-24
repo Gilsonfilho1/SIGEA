@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/Login";
-import Menu from "./components/Menu";
+import Menu from "./components/MenuLateral";
 
 export default function App() {
   return (
