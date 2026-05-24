@@ -31,3 +31,6 @@ class LoginRequest(BaseModel):
 class LoginResponse(BaseModel):
     message: str
     user: UserResponse
+    access_token: str
+    token_type: str
+    expires_in: int

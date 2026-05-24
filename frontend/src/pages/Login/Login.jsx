@@ -1,9 +1,12 @@
 import { IdCard, Lock } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { loginUser } from "../../services/api";
+import { setAuthSession } from "../../services/auth";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [cpf, setCpf] = useState("");
   const [password, setPassword] = useState("");
   const [feedback, setFeedback] = useState("");
@@ -16,8 +19,9 @@ export default function Login() {
 
     try {
       const data = await loginUser({ cpf, password });
-      localStorage.setItem("sigea:user", JSON.stringify(data.user));
+      setAuthSession(data);
       setFeedback(data.message);
+      navigate("/home", { replace: true });
     } catch (error) {
       setFeedback(error.response?.data?.detail || "Nao foi possivel entrar");
     } finally {

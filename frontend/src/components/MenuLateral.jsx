@@ -2,12 +2,23 @@ import {
   Bot,
   FlaskConical,
   House,
+  LogOut,
   PawPrint,
   Settings,
   StickyNote,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+import { clearAuthSession } from "../services/auth";
 
 export default function Menu() {
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    clearAuthSession();
+    navigate("/", { replace: true });
+  }
+
   return (
     <menu className="h-screen w-90 bg-green-700 flex flex-col p-8">
       <div>
@@ -59,6 +70,15 @@ export default function Menu() {
           Configurações
         </a>
       </div>
+
+      <button
+        type="button"
+        onClick={handleLogout}
+        className="mt-auto bg-black/16 transition hover:bg-black/30 px-4 py-6 rounded-2xl text-white font-bold flex items-center gap-2"
+      >
+        <LogOut size={24} />
+        Sair
+      </button>
     </menu>
   );
 }
