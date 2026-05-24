@@ -26,3 +26,8 @@ class UserResponse(BaseModel):
 class LoginRequest(BaseModel):
     cpf: str
     password: str
+
+
+class LoginResponse(BaseModel):
+    message: str
+    user: UserResponse
