@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.animals import router as animals_router
 from app.api.ai import router as ai_router
+from app.api.auth import router as auth_router
 from app.core.config import settings
 from app.db.database import Base, engine
 
@@ -44,3 +45,4 @@ def root():
 
 app.include_router(animals_router, prefix="/api/animals", tags=["Animals"])
 app.include_router(ai_router, prefix="/api/ai", tags=["Artificial Intelligence"])
+app.include_router(auth_router, prefix="/api/auth", tags=["Authentication"])
