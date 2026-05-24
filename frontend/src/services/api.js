@@ -19,4 +19,9 @@ export async function analyzeFertilityPattern(payload) {
   return response.data;
 }
 
+export async function loginUser(payload) {
+  const response = await api.post("/api/auth/login", payload);
+  return response.data;
+}
+
 export default api;
