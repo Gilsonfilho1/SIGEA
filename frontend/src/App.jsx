@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/Login";
-import Menu from "./components/MenuLateral";
+import Home from "./pages/Home/Home";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Menu />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
