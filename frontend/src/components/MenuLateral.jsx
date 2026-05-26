@@ -2,6 +2,7 @@ import {
   Bot,
   FlaskConical,
   House,
+  LogOut,
   PawPrint,
   Settings,
   StickyNote,
@@ -57,6 +58,13 @@ export default function Menu() {
         >
           <Settings size={24} />
           Configurações
+        </a>
+        <a
+          href="#"
+          className="bg-red-600 transition hover:bg-red-700 px-4 py-6 rounded-2xl text-white font-bold flex items-center gap-2"
+        >
+          <LogOut size={24} />
+          Sair
         </a>
       </div>
     </menu>
