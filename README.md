@@ -1,4 +1,4 @@
-# SIGEA
+# SIGEA (Descontinuado!!!!)
 
 Boilerplate full stack para um sistema de apoio agropecuário com cadastro de animais e análise simples de padrões de fertilidade usando uma API em Python.
 
